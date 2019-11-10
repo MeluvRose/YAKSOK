@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  .wrapper
+    .content
+      .card(data-status='done', data-person-from='김영근', data-person-to='박원종', data-tx='0x1231815293719823')
+        .left_icons
+          i.material-icons.w3-xxlarge.left_icons done
+        p Transaction : 0x1231815293719823
+        .Person
+          span.name 김영근
+          i.material-icons
+            | arrow_forward
+          span.name 박원종
+      .card(data-status='cancel', data-person-from='김영근', data-person-to='박원종', data-tx='0x1231815293719823')
+        .left_icons
+          i.material-icons.w3-xxlarge.left_icons clear
+        p Transaction : 0x1231815293719823
+        .Person
+          span.name 김영근
+          i.material-icons
+            | arrow_forward
+          span.name 박원종
+      .card(data-status='spending', data-person-from='김영근', data-person-to='박원종', data-tx='0x1231815293719823')
+        .left_icons
+          i.material-icons.w3-xxlarge.w3-spin  autorenew
+        p Transaction : 0x1231815293719823
+        .Person
+          span.name 김영근
+          i.material-icons
+            | arrow_forward
+          span.name 박원종
+  .footer
+    | Made By Team Mine
+  script(src='/javascripts/index.js')

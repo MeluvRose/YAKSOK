@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+.a_wrapper a:link{
+    text-decoration: none;
+    color:gainsboro;
+}
+.a_wrapper a:visited{
+    text-decoration: none;
+    color:gainsboro;
+}
+.a_wrapper a:hover{
+    text-decoration: none;
+    color:gainsboro;
+}
+body, html{
+    height:100%;
+}
+body{
+    background-color: #eee;
+}
+
+.wrapper{
+    margin:0 auto;
+    width:720px;
+    height:100%;
+    background-color: #eee;
+    padding-top: 30px;
+}
+.title{
+    padding:20px;
+    width:100%;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding:20px;
+}
+
+
+.title h1{
+    font-size : 56px;
+    display:inline-block;
+    position: absolute;
+    top:50%;
+    left:53%;
+    transform: translate(-50%,-50%);
+    font-family: 'Yeon Sung', cursive;
+    letter-spacing: 3cm;
+}
+
+.navbar{
+    width:100%;
+    text-align: center;
+    background-color:white;
+}
+
+.navbar_wrapper{
+    display: inline-flex;
+    height:64px;
+    width:720px;
+}
+
+.nav_item{
+    color:black;
+    background-color:white;
+    font-size:32px;
+    flex-grow: 1;
+    text-align: center;
+    line-height: 64px;
+}
+
+.nav_item:hover{
+    border-bottom:3px solid tomato;
+}
+
+.nav_item:active{
+    border-bottom:3px solid tomato;
+}
+
+.content{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    background-color:floralwhite;
+    overflow:hidden;
+    margin-bottom: 15px;
+    border:3px solid brown;
+    border-radius: 1em;
+}
+
+.footer{
+    background-color:steelblue;
+    text-align: center;
+    color:white;
+    letter-spacing: 0.5cm;
+}
+
+.righter{
+    float:right;
+}
+
+.left_icons{
+    float:left;
+    padding-right:30px;
+}
+
+.Person{
+    line-height: 16px;
+}
+
+.input_wrapper{
+    display:inline-flex;
+    align-items:center;
+    padding:8px;
+    border:2px solid black;
+    border-radius : 1em;
+    background-color:white;
+}
+
+.input_wrapper input{
+    border : 0px solid white;
+    height:20px;
+}
+
+.a_wrapper{
+    margin-right:20px;
+    border-right:2px solid black;
+    padding:10px;
+    float : left;
+    text-decoration: none !important;
+    font-size:21px;
+}
