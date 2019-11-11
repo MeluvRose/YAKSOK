@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title W3.CSS
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+  body
+    // Second Grid: Swing By & Contact
+    .w3-half.w3-teal.w3-container.none_float(style='height:600px')
+      .w3-padding-64.w3-padding-large.w3-center
+        h1 LOGIN
+        p.w3-opacity GET IN TOUCH
+        form.w3-container.w3-card.w3-padding-32.w3-white(action='/auth/login' method='POST')
+          .w3-section
+            label ID
+            input.w3-input(style='width:100%;', type='text', required='')
+          .w3-section
+            label PASSWROD
+            input.w3-input(style='width:100%;', type='text', required='')
+          button.w3-button.w3-green.w3-border.w3-round-large.inliner(type='submit') SEND

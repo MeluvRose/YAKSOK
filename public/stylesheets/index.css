@@ -140,3 +140,10 @@ body{
     text-decoration: none !important;
     font-size:21px;
 }
+
+.inline-block{
+    display:inline-block;
+    width:45%;
+    box-sizing: border-box;
+    margin-top:20px;
+}
