@@ -3,10 +3,18 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  let auth;
+  if(req.isAuthenticated()){
+    auth=true;
+  }
+  res.render('index', { title: 'Express',auth });
 });
 router.get('/search',function(req,res,next){
-  res.render('search');
+  let auth;
+  if(req.isAuthenticated()){
+    auth=true;
+  }
+  res.render('search',{auth});
 });
 
 module.exports = router;
