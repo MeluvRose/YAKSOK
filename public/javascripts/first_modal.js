@@ -4,6 +4,7 @@ let modal_in_modal=document.querySelector('.modal_in_modal');
 let displayed_card=new Array();
 let card_in_card = document.querySelectorAll('.card_in_card');
 let Accepts = document.querySelectorAll('.Accept');
+let Clicked_user_email;
 console.log(cards);
 console.log(card_in_card);
 for(let i=0;i<3;i++){
@@ -46,6 +47,7 @@ window.onclick=function(e){
         console.log('modal_in_modal');
         kill_modal_in_modal();
         modal.style.display='none';
+        Clicked_user_email='';
     }
 }
 
@@ -67,5 +69,6 @@ for(let card of cards){
 for (let accept of Accepts){
     accept.addEventListener('click',(e)=>{
         modal.style.display='block';
+        Clicked_user_email=e.target.dataset.email;
     });
 }
