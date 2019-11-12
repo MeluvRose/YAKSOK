@@ -8,6 +8,9 @@ module.exports=(sequelize,DataTypes)=>{
         password:{
             type:DataTypes.STRING(100),
             allowNull:false,
+        },
+        profile_img:{
+            type:DataTypes.STRING(100),
         }
     });
 }

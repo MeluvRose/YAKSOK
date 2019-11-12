@@ -20,9 +20,8 @@ const upload=multer({
         },
         filename:function(req,file,cb){
             const ext = path.extname(file.originalname);
-            req.file_full_name=path.basename(file.originalname,ext)+new Date().valueOf+ext;
             console.log('filename');
-            cb(null,path.basename(file.originalname,ext)+new Date().valueOf+ext);
+            cb(null,path.basename(file.originalname,ext)+ new Date().valueOf()+ext);
         },
     })
 });
@@ -55,8 +54,10 @@ router.post('/signUp',isNotLoggedIn,upload.single('file'),async function(req,res
     });
 
     if(req.file){
+        let file='img/'+req.file.filename;
+        console.log(file);
         await User.update({
-            profile_img:req.file_full_name,
+            profile_img:file,
         },{
             where:{email:req.body.email}
         });

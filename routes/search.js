@@ -1,11 +1,35 @@
 var express = require('express');
 var router = express.Router();
-router.get('/', function (req, res, next) {
-    res.render('search');
-});
+const {User}=require('../models');
+const Op=require('../models').Sequelize.Op;
 
-router.post('/',function(req,res,next){
+router.get('/',async function (req, res, next) {
+    let auth;
+    if(req.isAuthenticated()){
+        auth=true;
+    }
+    let email=req.query.email;
+    console.log('==============');
+    email=email+'%';
+    console.log(email);
     
+    try{
+        const user = await User.findAll({
+            where:{
+                email:{
+                    [Op.like]:email
+                }
+            },
+        });
+        console.log(user);
+        return res.render('search',{users:user,auth:auth});
+
+    }catch(error){
+        console.error(error);
+        next(error);
+    }
+    
+    res.render('search');
 });
 
 module.exports=router;

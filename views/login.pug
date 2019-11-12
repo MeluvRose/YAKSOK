@@ -14,8 +14,8 @@ html
         form.w3-container.w3-card.w3-padding-32.w3-white(action='/auth/login' method='POST')
           .w3-section
             label ID
-            input.w3-input(style='width:100%;', type='text', required='')
+            input.w3-input(style='width:100%;', type='text',name='email', required='')
           .w3-section
             label PASSWROD
-            input.w3-input(style='width:100%;', type='text', required='')
+            input.w3-input(style='width:100%;', type='text',name='password' required='')
           button.w3-button.w3-green.w3-border.w3-round-large.inliner(type='submit') SEND

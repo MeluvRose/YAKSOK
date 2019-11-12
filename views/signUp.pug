@@ -12,7 +12,7 @@ html
         h1 Sign Up
         br.w3-opacity
         br
-        form.w3-container.w3-card.w3-padding-32.w3-white(action='/auth/signUp' method="POST")
+        form.w3-container.w3-card.w3-padding-32.w3-white(action='/auth/signUp' method="POST" enctype='multipart/form-data')
           .w3-section
             label E-mail
             input.w3-input(style='width:100%;', type='text', name='email', required='')
@@ -22,4 +22,6 @@ html
           .filebox.bs3-success.w3-button.w3-green.w3-border.w3-round-large.padding_kill
             label(for='ex_file2') Profile Up
             input#ex_file2(type='file', name='file')
+            input(type='hidden' name='eth_wallet' value='')
           button.w3-button.w3-green.w3-border.w3-round-large.inliner(type='submit') Complete
+          

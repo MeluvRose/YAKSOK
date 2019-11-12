@@ -9,18 +9,25 @@ html(lang='en')
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
     link(href='https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap', rel='stylesheet')
     link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(rel='stylesheet', href='/stylesheets/first_modal.css')
   body
     .title
       button#testButton 이것은 버튼임당
       h1 약속
       .righter
         .input_wrapper
-          input(type='text item')
-          i.material-icons.item search
-        .a_wrapper
-          a(href='') 로그인
-        .a_wrapper
-          a(href='') 회원가입
+          form(method="GET" action="./search" id="search_form")
+            input(type='text' name="email" id="search" value='')
+            i.material-icons.item search
+        if !auth
+          .a_wrapper
+              a(href='/auth/login') 로그인
+        if !auth
+          .a_wrapper
+            a(href='/auth/signUp') 회원가입
+        if auth
+          .a_wrapper
+            a(href='/auth/logout') 로그아웃
     .navbar
       .navbar_wrapper
         .nav_item
@@ -31,4 +38,5 @@ html(lang='en')
           a(href='') 대기중
         .nav_item
           a(href='') 깨진
+          script(src='/javascripts/searchTag.js')
     block content

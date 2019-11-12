@@ -2,68 +2,38 @@ extends layout
 
 block content
     .wrapper
-        .w3-container.inline-block
-            .w3-card-4.w3-dark-grey(style='width:100%')
-                .w3-container.w3-center
-                    h3 Friend Request
-                    img(src='img_avatar3.png', alt='Avatar', style='width:80%')
-                    h5 John Doe
-                    .w3-section
-                        button.w3-button.w3-green Accept
-                        button.w3-button.w3-red Decline
-        .w3-container.inline-block
-            .w3-card-4.w3-dark-grey(style='width:100%')
-                .w3-container.w3-center
-                    h3 Friend Request
-                    img(src='img_avatar3.png', alt='Avatar', style='width:80%')
-                    h5 John Doe
-                    .w3-section
-                        button.w3-button.w3-green Accept
-                        button.w3-button.w3-red Decline
-        .w3-container.inline-block
-            .w3-card-4.w3-dark-grey(style='width:100%')
-                .w3-container.w3-center
-                    h3 Friend Request
-                    img(src='img_avatar3.png', alt='Avatar', style='width:80%')
-                    h5 John Doe
-                    .w3-section
-                        button.w3-button.w3-green Accept
-                        button.w3-button.w3-red Decline
-        .w3-container.inline-block
-            .w3-card-4.w3-dark-grey(style='width:100%')
-                .w3-container.w3-center
-                    h3 Friend Request
-                    img(src='img_avatar3.png', alt='Avatar', style='width:80%')
-                    h5 John Doe
-                    .w3-section
-                        button.w3-button.w3-green Accept
-                        button.w3-button.w3-red Decline
-        .w3-container.inline-block
-            .w3-card-4.w3-dark-grey(style='width:100%')
-                .w3-container.w3-center
-                    h3 Friend Request
-                    img(src='img_avatar3.png', alt='Avatar', style='width:80%')
-                    h5 John Doe
-                    .w3-section
-                        button.w3-button.w3-green Accept
-                        button.w3-button.w3-red Decline
-        .w3-container.inline-block
-            .w3-card-4.w3-dark-grey(style='width:100%')
-                .w3-container.w3-center
-                    h3 Friend Request
-                    img(src='img_avatar3.png', alt='Avatar', style='width:80%')
-                    h5 John Doe
-                    .w3-section
-                        button.w3-button.w3-green Accept
-                        button.w3-button.w3-red Decline
-        .w3-container.inline-block
-            .w3-card-4.w3-dark-grey(style='width:100%')
-                .w3-container.w3-center
-                    h3 Friend Request
-                    img(src='img_avatar3.png', alt='Avatar', style='width:80%')
-                    h5 John Doe
-                    .w3-section
-                        button.w3-button.w3-green Accept
-                        button.w3-button.w3-red Decline
-
-
+        each user in users
+            .w3-container.inline-block
+                .w3-card-4.w3-dark-grey(style='width:100%')
+                    .w3-container.w3-center
+                        h3 Friend Request
+                        img(src=user.profile_img, alt='Avatar', style='width:80%')
+                        h5= user.email
+                        .w3-section
+                            button.w3-button.w3-green.Accept(data-email=user.email) Accept
+                            button.w3-button.w3-red.Decline Decline
+    .modal
+      .select
+        .imgs
+          img.image(src='/images/dog.jpg', data-card='1')
+        .imgs
+          img.image(src='/images/pumkin.jpg', data-card='2')
+        .imgs
+          img.image(src='/images/snow.jpg', data-card='3')
+      .modal_in_modal
+        .dog-bgSizeCover.card_in_card(data-card='1')
+          div
+            textarea.dogfullpw.font-dogtsizepw.dogtitlepw.dogfontpw(inputmode='tel') 제목
+          div
+            textarea.dogfullpw.font-dogcsizepw.dogcomentpw.dogfontpw
+        .pu-bgSizeCover.card_in_card(data-card='2')
+          div
+            textarea.fullpw.font-pumtsizepw.pumtitlepw.pumfontpw(inputmode='tel') 제목
+          div
+            textarea.fullpw.font-pumcsizepw.pumcomentpw.pumfontpw
+        .sn-bgSizeCover.card_in_card(data-card='3')
+          div
+            textarea.fullsnowpw.snfontpw.sntitlepw.font-sntsizepw(inputmode='tel') 제목 
+          div
+            textarea.fullsnowpw.sncomentpw.snfontpw.font-sncsizepw
+    script(src='/javascripts/first_modal.js')
