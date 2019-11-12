@@ -1,0 +1,52 @@
+
+.dog-bgSizeCover {
+background-image: url('/images/dog.jpg');
+background-size: cover;
+  width: 720px;
+  height: 485px;
+  color: green;
+  overflow:hidden;
+  border:1px solid black;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+}
+
+.dogfullpw{
+  overflow: hidden;
+  border:  dotted #e6e3dd;
+    background-color: rgba(255, 255, 255, 0);
+    resize: "none";
+    text-align: center;
+}
+.dogcomentpw{
+margin-top: 0%;
+margin-right: 10%;
+margin-left: 55%;
+width: 35%;
+height: 280px;
+}
+.dogtitlepw{margin-top :3%;
+margin-left: 10%;
+margin-bottom: 3%;
+margin-right: 10%;
+width: 35%; height: 42px;
+margin-left: 55%;
+
+    max-height: 100px;
+	padding-top: 10px;
+    }
+    .dogfontpw{font-family: 'Nanum Pen Script', cursive;
+font-size-adjust: inherit;
+    }
+.font-dogtsizepw{
+    font-size: 2em;
+    color:black;
+    text-decoration: underline
+}
+.font-dogcsizepw{
+    font-size: 1.3em;
+    color:black;
+}

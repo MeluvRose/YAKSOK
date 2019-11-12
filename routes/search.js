@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 const {User}=require('../models');
 const Op=require('../models').Sequelize.Op;
+const {isLoggedIn} = require('./middlewares');
 
-router.get('/',async function (req, res, next) {
+router.get('/',isLoggedIn,async function (req, res, next) {
     let auth;
     if(req.isAuthenticated()){
         auth=true;

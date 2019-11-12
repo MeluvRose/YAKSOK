@@ -6,8 +6,16 @@ module.exports=(sequelize,DataTypes)=>{
         content:{
             type:DataTypes.STRING(400),
         },
-        sender:{
+        status:{
+            type:DataTypes.INTEGER,
+        },
+        ether_id:{
             type:DataTypes.STRING(400),
+        },
+        card_number:{
+            type:DataTypes.INTEGER,
         }
     });
 }
+
+//

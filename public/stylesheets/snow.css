@@ -1,0 +1,57 @@
+.sn-bgSizeCover {
+background-image:url('/images/snow.jpg');
+  background-size: cover;
+  width: 720px;
+  height: 485px;
+  overflow:hidden;
+  border:1px solid black;
+  margin: 0%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+}
+
+.fullsnowpw{
+
+    overflow: hidden;
+    border:  dotted #e6e3dd;
+    background-color: rgba(255, 255, 255, 0);
+    resize: "none";
+
+    text-align: center;
+
+}
+.snfontpw{font-family: 'Nanum Pen Script', cursive;
+font-size-adjust: inherit;
+
+
+;
+}
+.font-sntsizepw{
+    font-size: 2em;
+    color:#ffbf00;
+    text-decoration: underline
+}
+.font-sncsizepw{
+    font-size: 1.3em;
+    color:#ffbf00;
+}
+.sntitlepw{margin-top :3%;
+margin-left: 10%;
+margin-bottom: 3%;
+margin-right: 65%;
+width: 35%; height: 42px;
+    margin-left: 10%;
+
+    max-height: 100px;
+	padding-top: 10px;
+    }
+.sncomentpw{
+margin-top: 0%;
+margin-left: 10%;
+margin-right: 65%;
+width: 35%;
+height: 280px;
+}

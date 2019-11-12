@@ -8,6 +8,13 @@ html,body{
     height:100%;
 }
 
+.SUBMIT{
+    position: fixed;
+    bottom:0;
+    left:50%;
+    transform:translate(0,-50%);
+}
+
 .modal{
     display:none;
     position:fixed;
