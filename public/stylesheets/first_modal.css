@@ -26,7 +26,16 @@ html,body{
     overflow:auto;
     background: rgb(0,0,0);
     background:rgba(0,0,0,0.4);
+    animation-name:modalfadeIn;
+    animation-duration:0.51s;
 }
+
+@keyframes modalfadIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
 
 .select{
     background-color:#fefefe;
@@ -35,6 +44,21 @@ html,body{
     padding:20px;
     border:1px solid black;
     overflow:hidden;
+    animation-name:modalSelect;
+    animation-duration: 0.5s;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes modalSelect{
+    from{top:-300px; opacity: 0;}
+    to{
+        top:50%;
+        left:50%;
+        trnasform:translate(-50%,-50%);
+    }
 }
 
 .imgs{
@@ -62,6 +86,13 @@ html,body{
     height:100%;
     overflow:auto;
     background:black;
+    animation-name:modal_in_modal;
+    animation-duration: 0.5s;
+}
+
+@keyframes modal_in_modal{
+    from{opacity:0;}
+    to{opacity: 1;}
 }
 
 
@@ -79,6 +110,22 @@ html,body{
     left:50%;
     transform:translate(-50%,-50%);
     display:none;
+    animation-name:dog;
+    animation-duration: 0.5s;
+}
+
+@keyframes dog{
+    from{
+        top:-300px;
+        opacity: 0;
+    }
+
+    to{
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        opacity:1;
+    }
 }
 
 .dogfullpw {
@@ -150,7 +197,22 @@ html,body{
     left:50%;
     transform:translate(-50%,-50%);
     display: none;
+    animation-name:pumkin;
+    animation-duration: 0.5s;
+}
 
+@keyframes pumkin{
+    from{
+        left:-300px;
+        opacity: 0;
+    }
+
+    to{
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        opacity:1;
+    }
 }
 
 .font-pumtsizepw {
@@ -229,6 +291,18 @@ html,body{
     left:50%;
     transform:translate(-50%,-50%);
     display:none;
+    animation-name:snows;
+    animation-duration: 0.5s;
+}
+
+@keyframes snows{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity:1;
+    }
 }
 
 .fullsnowpw {
