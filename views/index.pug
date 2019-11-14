@@ -30,6 +30,40 @@ block content
           i.material-icons
             | arrow_forward
           span.name 박원종
-  .footer
-    | Made By Team Mine
+      .w3-container.w3-margin-bottom(data-status='spending', data-person='박원종',data-content='CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.' )
+        .w3-card-4
+          header.w3-container.w3-light-grey
+            h3 John Doe
+          .w3-container
+            hr
+            i.material-icons.w3-xxlarge.w3-spin.w3-left.w3-margin-right autorenew
+            p
+              | CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.
+            br
+          button#next.w3-button.w3-green + Connect
+          button#fail.w3-button.w3-red.w3-right -fail
+      .w3-container.w3-margin-bottom(data-status='cancel', data-person='박원종',data-content='CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.' )
+        .w3-card-4
+          header.w3-container.w3-light-grey
+            h3 John Doe
+          .w3-container
+            hr
+            i.material-icons.w3-xxlarge.w3-left.w3-margin-right clear
+            p
+              | CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.
+            br
+          button#next.w3-button.w3-green + Connect
+          button#fail.w3-button.w3-red.w3-right -fail
+      .w3-container.w3-margin-bottom(data-status='done', data-person='박원종',data-content='CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.' )
+        .w3-card-4
+          header.w3-container.w3-light-grey
+            h3 John Doe
+          .w3-container
+            hr
+            i.material-icons.w3-xxlarge.w3-left.w3-margin-right done
+            p
+              | CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.
+            br
+          button#next.w3-button.w3-green + Connect
+          button#fail.w3-button.w3-red.w3-right -fail
   script(src='/javascripts/index.js')
